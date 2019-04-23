@@ -1,0 +1,4 @@
+First of all, this lab seems to be a really fundamental one for the whole Database Assignment. So I didn't do a lot of design decisions in this lab.
+Secondly, as is clearly shown in the manual, the APIs are well designed, so I didn't change one.
+Meanwhile, I've passed all the 35 tests, as well as the one in section 2.7. I also did some extra tests.
+Last but not least, I've used three days to finish this lab. Some of the time is used to learn the inner structure of a database, such as the relationship among tuples, fields, tables etc. I must say the manual is of great help and showed me how to do this assignment properly.
