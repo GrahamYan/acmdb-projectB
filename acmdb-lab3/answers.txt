@@ -1,0 +1,4 @@
+First of all, this lab is the hardest lab so far, but I didn't do a lot of design decisions in this lab. I just follow the steps to finish all the work.
+Secondly, as is clearly shown in the manual, the APIs are well designed, so I didn't change one.
+Meanwhile, I've passed all the 179 tests, as well as the one in section 2.5 and 2.6.
+Last but not least, this time I used two whole days to finish this lab because I was so busy preparing my GRE test. When I finished the test listed in the manual, I found I still can't pass all the tests. So I went through all the tests I failed and found out the "SeqScan.java" I submitted in lab2 was not quite correct. I think with more and more class added, it will be very difficult to find the previous mistakes, so I hope I got all these files in this lab right.
