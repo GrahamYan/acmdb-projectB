@@ -1,0 +1,4 @@
+First of all, this lab is not as hard as the last one, and I didn't do any extra design.
+Secondly, as is clearly shown in the manual, the APIs are well designed, so I didn't change one.
+Meanwhile, I've passed all the 196 tests.
+Last but not least, this time I used two days to finish this lab. With the number of files and tests rising, it's been more and more difficult to find the bug in my code. Debugging those files which is written in lab1 or lab2 is the most difficult part.
