@@ -235,7 +235,6 @@ public class HeapFile implements DbFile {
         public void open() throws DbException, TransactionAbortedException
         {
             this.ind = 0;
-            //out.println("in");
             if (numPages() == 0)
             {
                 this.TupleIterators = new ArrayList<Tuple>().iterator();
@@ -245,7 +244,6 @@ public class HeapFile implements DbFile {
                 HeapPageId tmp = new HeapPageId(getId(), ind);
                 TupleIterators = ((HeapPage)Database.getBufferPool().getPage(tid, tmp, Permissions.READ_ONLY)).iterator();
             }
-            //??????
         }
 
         @Override

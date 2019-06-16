@@ -205,14 +205,38 @@ public class BufferPool {
      */
     public void insertTuple(TransactionId tid, int tableId, Tuple t)
             throws DbException, IOException, TransactionAbortedException {
+        ArrayList<Page> pages = Database.getCatalog().getDatabaseFile(tableId).insertTuple(tid, t);
+        for (Page page : pages){
+            page.markDirty(true, tid);
+            PageId pid = page.getId();
+            if (this.pages.containsKey(pid)) {
+                this.pages.put(pid,page);
+                continue;
+            }
+            if (this.pages.size() < numPages) {
+                this.pages.put(pid, page);
+            } else {
+                Iterator<PageId> iter = this.pages.keySet().iterator();
+                PageId evict = iter.next();
+                boolean mark = false;
+                while (this.pages.get(evict).isDirty() != null) {
+                    if (!iter.hasNext()) {
+                        mark = true;
+                        break;
+                    }
+                    evict = iter.next();
+                }
+                if (mark) {
+                    flushPage(page.getId());
+                    continue;
+                }
+                flushPage(evict);
+                this.pages.remove(evict);
+                this.pages.put(pid, page);
+            }
+        }
         // some code goes here
         // not necessary for lab1
-        ArrayList<Page> pages = Database.getCatalog().getDatabaseFile(tableId).insertTuple(tid, t);
-        for (Page tmp : pages) {
-            tmp.markDirty(true, tid);
-            pages.remove(tmp.getId());
-            this.pages.put(tmp.getId(), tmp);
-        }
     }
 
     /**
