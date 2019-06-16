@@ -1,4 +1,2 @@
-First of all, this lab is not as hard as the last one, and I didn't do any extra design.
-Secondly, as is clearly shown in the manual, the APIs are well designed, so I didn't change one.
-Meanwhile, I've passed all the 196 tests.
-Last but not least, this time I used two days to finish this lab. With the number of files and tests rising, it's been more and more difficult to find the bug in my code. Debugging those files which is written in lab1 or lab2 is the most difficult part.
+This lab is very difficult and it took me a lot of time in order to pass the "testBigFile" test. It also shows me how important to get everything secured in multi-thread tests. I created a java class named "LockManager" to deal with things collerating to locks.
+There is an additional explaination I want to make. I just found out that the submition time has some problem. Since I used "git add --all" command every time, the submiting time of lab1 became that of lab2, and lab2 became lab3 and so on. I hope this will not affect the judgement of yours.
